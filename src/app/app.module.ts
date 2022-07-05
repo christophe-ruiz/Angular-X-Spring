@@ -9,9 +9,12 @@ import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from "@angular/common/http";
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+import {MessagesModule} from "../store/messages/messages.module";
+import {NotificationsModule} from "../store/notifications/notifications.module";
+import {messagesReducer} from "../store/messages/messages.reducer";
+import {notificationsReducer} from "../store/notifications/notifications.reducer";
 import {StoreModule} from "@ngrx/store";
-import {MessagesModule} from "../modules/messages.module";
-import {NotificationsModule} from "../modules/notifications.module";
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import {NotificationsModule} from "../modules/notifications.module";
     HttpClientModule,
     AppRoutingModule,
     StoreModule.forRoot({}),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25 // Retains last 25 states
+    }),
     MessagesModule,
     NotificationsModule
   ],

@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
-import {notificationsFeatureKey, notificationsReducer} from "../reducers/notifications.reducer";
+import {
+  notificationsFeatureKey,
+  notificationsReducer,
+} from "./notifications.reducer";
 
 @NgModule({
   imports: [

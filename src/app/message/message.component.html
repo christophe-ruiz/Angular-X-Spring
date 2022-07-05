@@ -1,1 +1,8 @@
-<p>message works!</p>
+<div (click)="clickAction()" class="msg" [ngClass]="this.message.read ? 'green' : 'red'">
+  <span>{{this.message.id}}</span>
+  <div>
+    <span>{{this.message.sender.name}}</span>
+    <img src="{{this.message.sender.profileImage}}" alt="Photo de profil de {{this.message.sender.name}}"/>
+  </div>
+  <p>{{this.message.content}}</p>
+</div>

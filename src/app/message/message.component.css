@@ -1,0 +1,14 @@
+.green {
+  background-color: seagreen;
+}
+
+.red {
+  background-color: darkred;
+}
+
+.msg {
+  border: 1px solid blue;
+  display: flex;
+  padding: 1vw;
+  color: white;
+}
