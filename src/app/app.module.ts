@@ -15,6 +15,8 @@ import {NotificationsModule} from "../store/notifications/notifications.module";
 import {messagesReducer} from "../store/messages/messages.reducer";
 import {notificationsReducer} from "../store/notifications/notifications.reducer";
 import {StoreModule} from "@ngrx/store";
+import { NotificationComponent } from './notification/notification.component';
+import { NotificationListComponent } from './notification-list/notification-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import {StoreModule} from "@ngrx/store";
     MenuComponent,
     MessageListComponent,
     MessageComponent,
-    HeaderComponent
+    HeaderComponent,
+    NotificationComponent,
+    NotificationListComponent
   ],
   imports: [
     BrowserModule,

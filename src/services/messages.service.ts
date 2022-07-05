@@ -13,7 +13,7 @@ export class MessagesService {
   private url : string = "https://io-labs.fr/messenger/messages.json";
 
   constructor(private http: HttpClient, private store: Store<AppState>) {
-    this.http.get<Message[]>("https://io-labs.fr/messenger/messages.json").subscribe((messages: Message[]) => {
+    this.http.get<Message[]>(this.url).subscribe((messages: Message[]) => {
       store.dispatch(getAllMessages({messages: messages}));
     })
   }

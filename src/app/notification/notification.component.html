@@ -1,0 +1,6 @@
+<div (click)="clickAction()" [ngClass]="notification.read ? 'grey' : 'blue'">
+  <span>{{notification.id}}</span>
+  <span>{{notification.content}}</span>
+  <span>{{notification.contactId}}</span>
+  <span>{{notification.date | date: 'dd/mm/YYYY hh:mm:ss'}}</span>
+</div>

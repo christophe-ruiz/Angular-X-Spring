@@ -7,7 +7,10 @@ export const messagesInitialState: Message[] = [];
 
 export const messagesReducer = createReducer(
   messagesInitialState,
-  on(getAllMessages, (state, {messages}) => messages),
+  on(getAllMessages, (state, {messages}) => {
+    console.log('appel reducer all messages');
+    return messages
+  }),
   on(clickOnMessage, (state, message) => {
     const messageIndex = state.findIndex((m) => m.id === message.id)
     let messages = JSON.parse(JSON.stringify(state))
